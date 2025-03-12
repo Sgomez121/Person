@@ -1,0 +1,35 @@
+public class Teacher extends Employee{
+    String qualification;
+    String subject;
+
+    public Teacher(String name, Date dob, Date doa, String subject, String qualifications, int salary){
+        //From Person class
+        this.name = name;
+        this.dob = dob;
+        //From employee class
+        this.dateOfAppointment = doa;
+        this.salary = salary;
+        //From Teacher class
+        this.subject = subject;
+        this.qualification = qualifications;
+    }
+    @Override
+    void getDetails() {
+        System.out.println("Name of Teacher: " + this.name);
+        System.out.println("Date of Birth: " + this.dob.getDate());
+        System.out.println("Date of Appointment: " + this.dateOfAppointment.getDate());
+        System.out.println("Subject: " + this.subject);
+        System.out.println("Qualifications: " + this.qualification);
+        System.out.println("Salary: " + this.getSalary());
+    }
+
+    @Override
+    void setSalary(int sal) {
+        this.salary = sal;
+    }
+
+    @Override
+    int getSalary() {
+        return this.salary;
+    }
+}
