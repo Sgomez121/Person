@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+        Date dobOfStudent = new Date(1, 1, 2005); //dob of student
+        Date dobOfTeacher = new Date(0, 10, 1995); //dob of teacher
+        Date dobOfAppointment = new Date(1, 4, 2024); //dateOfAppointment of teacher
+
+        Teacher teacher1 = new Teacher("Mike", dobOfTeacher, dobOfAppointment, "Electronics", "MTech", 0);
+        teacher1.setSalary(50000);
+        Student student1 = new Student("Belinda", dobOfStudent, teacher1, "Electronics");
+
+        teacher1.getDetails();
+        student1.getDetails();
+    }
+}
